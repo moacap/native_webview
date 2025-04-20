@@ -64,6 +64,7 @@ public class FlutterWebViewController: NSObject, FlutterPlatformView {
         // If I don't set the background color, the screen is displayed in black.
         webview.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0)
         webview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        webview.scrollView.bounces = false
         self.parent.addSubview(webview)
 
         // Passing the handle method to setMethodCallHandler will cause a memory leak
